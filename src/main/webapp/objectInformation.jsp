@@ -143,17 +143,17 @@
                             <form action="Valorar" method="POST" class="row">
                                 <div class="input-field col s12 m12">
                                     <p><input name="valueGroup" type="radio" id="0" value="0" />
-                                        <label for="value0">0</label></p>
+                                        <label for="0">0</label></p>
                                     <p><input name="valueGroup" type="radio" id="1" value="1" />
-                                        <label for="value1">1</label></p>
+                                        <label for="1">1</label></p>
                                     <p><input name="valueGroup" type="radio" id="2" value="2"/>
-                                        <label for="value2">2</label></p>
+                                        <label for="2">2</label></p>
                                     <p><input name="valueGroup" type="radio" id="3" value="3"/>
-                                        <label for="value3">3</label></p>
+                                        <label for="3">3</label></p>
                                     <p><input name="valueGroup" type="radio" id="4" value="4"/>
-                                        <label for="value4">4</label></p>
+                                        <label for="4">4</label></p>
                                     <p><input name="valueGroup" type="radio" id="5" value="5"/>
-                                        <label for="value5">5</label></p>
+                                        <label for="5">5</label></p>
                                     <%if (objType.contains("P")){%>
                                     <input type="hidden" id="objectId" name="objectId" value="<%= objectBlueprint.getIdBlueprint()%>">
                                     <input type="hidden" id="objectType" name="objectType" value="P">
@@ -162,9 +162,6 @@
                                     <input type="hidden" id="objectId" name="objectId" value="<%= objectMockup.getIdMockup() %>">
                                     <input type="hidden" id="objectType" name="objectType" value="M">
                                     <% } %>
-                                </div>
-                                <div class="input-field col s12 m12">
-                                    
                                 </div>
                                 <div class="input-field col s12 m12">
                                     <button class="btn waves-effect waves-light cyan darken-1" type="submit" name="btnValorar">Valorar</button>
@@ -211,7 +208,7 @@
                                     <h6 class="black-text">
                                         <%= comment.getDescription() %>
                                     </h6>
-                                    <h6 class="grey-text text-lighten-1">Comenatario de: <%= comment.getUser().getName() %></h6>
+                                    <h6 class="grey-text text-lighten-1">Comentario de: <%= comment.getUser().getName() %></h6>
                                 </div>
                             </div>
                         </div>

@@ -100,6 +100,7 @@ public class Valorar extends HttpServlet {
         
         if(objScore == null)
         {
+            objScore = new Score();
             objScore.setIdObject(objectId);
             objScore.setObjectType(objectType);
             objScore.setUser(objUser);
