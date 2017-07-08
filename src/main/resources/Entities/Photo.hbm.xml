@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-jul-2017 11:16:14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entities.Photo" table="photo" catalog="arch" optimistic-lock="version">
+        <id name="idPhoto" type="java.lang.Integer">
+            <column name="idPhoto" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="mockup" class="Entities.Mockup" fetch="select">
+            <column name="idMockup" not-null="true" />
+        </many-to-one>
+        <property name="file" type="binary">
+            <column name="file" not-null="true" />
+        </property>
+        <property name="fileType" type="string">
+            <column name="fileType" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
